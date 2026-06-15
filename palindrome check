@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+  
+
+int main()
+{ 
+  char word[50];
+  scanf("%s",word);
+  int st=0,end=strlen(word)-1;
+  bool ispalindrome=true;
+  while(st<end){
+      if(word[st++]!=word[end--]){
+          ispalindrome =false;
+          break;
+      }
+  }
+  if(ispalindrome==true){
+      printf("palindrome found");
+      
+  }else{
+       printf("palindrome not found");
+  }
+    
+  return 0;}
