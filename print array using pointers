@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+void printarr(int *ptr,int n){
+    for(int i=0;i<n;i++){
+        printf("%d ",*(ptr+i));
+    }
+}
+    
+
+int main()
+{ 
+    int arr[]={1,2,3,4,5};
+    int sz=5;
+    printarr(arr,sz);
+  return 0;}
