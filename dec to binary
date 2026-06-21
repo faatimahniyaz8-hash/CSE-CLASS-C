@@ -1,0 +1,20 @@
+#include <stdio.h>
+int dectobin(int decnum){
+    int ans=0,power=1;
+    while(decnum){
+        int rem=decnum%2;
+        decnum=decnum/2;
+        ans+=rem*power;
+        power=power*10;
+    }
+    return ans;
+}
+int main()
+{
+    int num;
+    printf("enter number:");
+    scanf("%d",&num);
+   printf("%d",dectobin(num));
+
+    return 0;
+}
