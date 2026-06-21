@@ -1,0 +1,20 @@
+#include <stdio.h>
+int bintodec(int binnum){
+    int ans=0,power=1;
+    while(binnum){
+        int rem=binnum%10;
+        binnum=binnum/10;
+        ans+=rem*power;
+        power=power*2;
+    }
+    return ans;
+}
+int main()
+{
+    int num;
+    printf("enter number:");
+    scanf("%d",&num);
+   printf("%d",bintodec(num));
+
+    return 0;
+}
