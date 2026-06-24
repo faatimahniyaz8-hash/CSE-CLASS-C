@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <limits.h>
+int main()
+{
+int matrix[4][3]={{1,2,3},{4,5,0},{7,8,-1}};
+int n=4,m=3;
+int largest=INT_MIN;
+for(int i=0;i<n;i++){
+    int maxsum=0;
+    for(int j=0;j<m;j++){
+       
+        maxsum+=matrix[i][j];
+    }
+    if(maxsum>largest){
+        largest=maxsum;
+    }
+}
+printf("largest = %d",largest);
+
+    return 0;
+}
